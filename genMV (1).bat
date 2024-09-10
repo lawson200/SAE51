@@ -48,6 +48,12 @@ set /p mdp=Mot de passe ?
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" setextradata "%nom%" Utilisateur "%user%"
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" setextradata "%nom%" Cpu "%cpu%"
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" setextradata "%nom%" Memoire "%memory%"
+"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "%nom%" --nic1 nat
+"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm --boot1 net
+"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "%nom%" --name "IDE Controller" --add ide
+"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "%nom%" --storagectl "IDE Controller" --port 1 --device 0 --type dvdd
+
+read -p "Veuillez entrer le chemin complet de l'image ISO : " ISO_PATH
 pause
 goto end
 
