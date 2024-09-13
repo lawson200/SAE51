@@ -40,7 +40,7 @@ set /p mdp=Mot de passe ?
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" createvm --name "%nom%" --ostype "Debian11" --register --basefolder "C:\Users\RT2-FA\VirtualBox VMs"
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "%nom%" --memory %memory%
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "%nom%" --cpus %cpu%
-"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "!nom!" --memory %memory% --cpus %cpu% --nic1 nat --boot1 net
+"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "%nom%" --memory %memory% --cpus %cpu% --nic1 nat --boot1 net
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" createhd --filename "C:\Users\RT2-FA\VirtualBox VMs\%nom%\%nom%_DISK.vdi" --size %size% --format VDI
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" unattended install "%nom%" --iso="C:\Users\RT2-FA\VirtualBox VMs" --user="%user%" --full-user-name="%user%" --password "%mdp%" --install-additions --time-zone=UTC+1
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm "%nom%" setcredentials "%user%" "%mdp%" "DOMTEST"
