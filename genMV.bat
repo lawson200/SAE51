@@ -55,7 +55,7 @@ for /L %%i in (1,1,%nb_vm%) do (
     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "%nom%" --memory %memory% --cpus %cpu%
     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" createhd --filename "C:\Users\RT2-FA\VirtualBox VMs\%nom%\%nom%_DISK.vdi" --size %size% --format VDI
 
-    :: Installation sans surveillance avec l'ISO spécifié
+    :: Installation l'ISO spécifié
     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" unattended install "%nom%" --iso="%iso_path%" --user="%user%" --full-user-name="%user%" --password "%mdp%" --install-additions --time-zone=UTC+1
 
     :: Configurer le réseau et le démarrage PXE
