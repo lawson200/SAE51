@@ -21,7 +21,7 @@ Ce guide explique l'utilisation d'un script automatisé pour la création et la 
 2. Exécutez le script batch avec la commande suivante :
 
    ```bash
-   vm_script.bat
+   genMv.bat
 
 ### 2.3. Suivez les instructions affichées :
 
@@ -42,7 +42,7 @@ Le script créera les machines, les associera aux utilisateurs spécifiés et la
 2. Rendez le fichier exécutable avec la commande suivante :
 
    ```bash
-   chmod +x vm_script.sh
+   chmod +x genMV.sh
 
 ### 2.5. Guide d'utilisation
 
